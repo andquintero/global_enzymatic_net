@@ -1,0 +1,19 @@
+Usage example:
+./1_2_Fetch_EC_met.pl ../Data
+./3_filter_reactions_slim.pl 40 ../Data/reactions_slim 
+./4_network_constuction.pl ../Data/reactions_slim.filter_40
+./5_adjacency_matrix.pl ../Results/network.reactions_slim.filter_40
+
+Main scripts description:
+
+1_2_Fetch_EC_met.pl = Reads enzyme information fron KEGG database and prints a file of enzymes and associated metabolites
+	use= ./1_2_Fetch_EC_met.pl ../Data
+	the output file (reactions_slim ) is printed in the folder Data
+	
+3_filter_reactions_slim.pl = counts metabolite frequency and discards the n most common, this helps to reduce the high connectivity present in this kind of networks
+	use= ./3_filter_reactions_slim.pl NUMBER ../Data/reactions_slim 
+	the output file (reactions_slim.filter_NUMBER) is printed in the folder Data
+
+4_network_constuction.pl = find enzymes that shares a common metabolite and prints them by pairs	
+	use= ./4_network_constuction.pl ../Data/reactions_slim.filter_NUMBER
+	

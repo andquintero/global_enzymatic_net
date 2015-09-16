@@ -1,0 +1,6 @@
+Requires perl module LWP::Simple for downloading enzime infromation from KEGG database
+Require a working BLAST+ installation and the path of the directory containing the blast executable programs must be added to the PATH environment variable. 
+Also a formatbd formated database of a fasta file of all protein sequences of the organism of interest is needed and similarity matrix of the genes of interest computed using expression data.
+
+Usage:
+Run the scripts in the provided order (as described in the paper), first the scripts in the Metabolic_network directory and later the scripts in the Blast_Gold_standard directory (see README uder each directory for detailed information).
